@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $title = 'Food Security';
+    $goals = ['Feed the hungry', 'Connect communities', 'Know our neighbors'];
+
+    return view('welcome', compact('title', 'goals'));
 });
