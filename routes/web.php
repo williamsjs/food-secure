@@ -11,13 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    $title = 'Food Security';
-    $goals = ['Feed the hungry', 'Connect communities', 'Know our neighbors'];
-
-    return view('welcome', compact('title', 'goals'));
-});
+// $goals = ['Feed the hungry', 'Connect communities', 'Know our neighbors'];
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
