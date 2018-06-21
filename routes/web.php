@@ -17,3 +17,7 @@ Route::get('/', function () {
 
     return view('welcome', compact('title', 'goals'));
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
